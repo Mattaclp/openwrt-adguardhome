@@ -57,6 +57,10 @@ ifeq ($(ARCH),aarch64)
 	PKG_ARCH_ADGUARDHOME:=arm64
 endif
 
+ifeq ($(ARCH),armv8)
+	PKG_ARCH_ADGUARDHOME:=arm64
+endif
+
 TAR_NAME:=AdGuardHome_linux_$(PKG_ARCH_ADGUARDHOME)
 
 PKG_SOURCE:=$(TAR_NAME).tar.gz
